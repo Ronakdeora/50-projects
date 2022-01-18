@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.hamburger{
+    position: fixed;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    margin: 0;
+    padding: 20px 40px;
+    left: 0px;
+    top: 0px;
+    background-color: red;
+    height: 100vh;
+    width: 25vw;
+    transition: all 1s ease-in-out;
+    transition-delay: 0.2s;
+}
+.menu::after {
+    content: " ";
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-color: black;
+    height: 100vh;
+    width: 32.5vw;
+    transition: all 1s ease-in-out;
+
+}
+.menu::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 28.75vw;
+    background-color: brown;
+    height: 100vh;
+    transition: all 1s ease-in-out;
+    transition-delay: 0.1s;
+}
+.menu.hide{
+    transform: translateX(-32.5vw);
+}
