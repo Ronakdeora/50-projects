@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto Mono',sans-serif;
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+.container{
+    max-width: 250px;
+
+
+}
+.bottle-main{
+    height: 200px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+.bottle-small{
+    height: 70px;
+    width: 35px;
+    border-radius: 0 0 15px 15px;
+    float: left;
+    margin: 10px 13.5px;
+}
+.bottle-small .on{
+    background-color: #89a5e2; ;
+}
+.bottle{
+    background-color: rgb(152, 185, 212);
+    border-radius: 0 0 40px 40px;
+    border: 4px solid #4e5cf5;
+    cursor: pointer;
+    overflow: hidden;
+   
+}
+.bottle-main .remaining{
+    background-color: transparent;
+    height: 100%;
+}
+.bottle-main .filling{
+    background-color: steelblue;
+    width: 100%;
+    transition: height 0.3s ease-in;
+}

@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --left--bg--color: rgba(19, 17, 124, 0.5);
+    --right--bg--color: rgba(43,43,43,0.6);
+    --left--btn--color: rgba(19, 17, 124, 1);
+    --right--btn--color: rgba(43,200,43,1);
+}
+body{
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: teal;
+}
+.game{
+    position: relative;
+    text-align: center;
+    width: 50%;
+    height: 100vh;
+    transition: width .6s ease-in-out;
+}
+.P5{
+    background: url("https://static.highsnobiety.com/thumbor/hVaeAU7-f-m0DAU9MYlZQeT5-M8=/960x640/static.highsnobiety.com/wp-content/uploads/2020/02/26123149/playstation-5-controller-biofeedback-01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.P5::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left--bg--color);
+}
+.P5 h5:hover{
+    background-color: var(--left--btn--color);
+    border: var(--left--btn--color);
+}
+.Xbox h5:hover{
+    background-color: var(--right--btn--color);
+    border: var(--right--btn--color);
+}
+.Xbox::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    background-color: var(--right--bg--color);
+}
+
+.Xbox{
+    background: url("https://compass-ssl.xbox.com/assets/83/53/83534a33-0998-43dc-915a-4ec0a686d679.jpg?n=10202018_Panes-3-up-1400_Hero-SX_570x570.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    position: absolute;
+    top: 40%;
+    font-size: 4rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+}
+h5{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid white;
+    padding: 15px 60px;
+    white-space: nowrap;
+}
+.game.strach{
+    width: 100%;
+}
+@media(max-width: 800px){
+    h1{
+        font-size: 2rem;
+        top: 30%;
+    }
+    h5{
+        font-size: 0.8rem;
+        padding: 15px 40px ;
+        top: 40%;
+    }
+}
