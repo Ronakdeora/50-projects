@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .panel{
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50px;
+            flex: 0.5;
+            margin: 10px;
+            position: relative;
+            transition: flex 0.7s ease-in;
+            cursor: pointer;
+        }
+        .active{
+            flex: 5;
+        }
+        .container h3{
+            text-transform: capitalize;
+            color: white;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            opacity: 0;
+        }
+        .panel.active h3{
+            opacity: 1;
+            transition: opacity 0.5s ease-in 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="panel active" style=" background-image: url(https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);">
+            <h3>beach 1</h3>
+        </div>
+        <div class="panel" style="background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80);">
+            <h3> beach 2</h3>
+        </div>
+        <div class="panel" style="background-image: url(https://images.unsplash.com/photo-1551523713-c1473aa01d9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80);">
+            <h3> beach 3</h3>
+        </div>
+        <div class="panel" style="background-image: url(https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80);">
+            <h3> beach 4</h3>
+        </div>
+        <div class="panel" style="background-image: url(https://images.unsplash.com/photo-1572246538688-3f326dca3951?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);">
+            <h3> beach 5</h3>
+        </div>
+    </div>
+
+</div>
+    <script>
+        const panels=document.querySelectorAll('.panel');
+
+        panels.forEach((panel)=>{
+            panel.addEventListener('click',()=>{
+                removeALLclass();
+                panel.classList.add('active')
+            })
+        })
+       function removeALLclass(){
+           panels.forEach((panel)=>{
+               panel.classList.remove('active')
+           })
+        }
+
+    </script>
+    
+</body>
+</html>
